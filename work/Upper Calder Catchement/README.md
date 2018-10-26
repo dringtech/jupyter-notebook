@@ -10,3 +10,7 @@ Required sources
 
 * Rainfall data - http://environment.data.gov.uk/flood-monitoring/doc/rainfall
 * River level data for Hebden Water
+
+## References
+
+* https://getoutside.ordnancesurvey.co.uk/local/hebden-bridge-calderdale
