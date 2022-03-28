@@ -5,12 +5,12 @@ import numpy as np
 
 def read_levels_file(filename):
     with open(filename, 'r') as f:
-        data = list(csv.reader(f, delimiter=","))
+        data = list(csv.reader(f, delimiter=",", strict=True))
 
     dates = [dateutil.parser.isoparse(r[0]) for r in data[1:]]
     levels = np.array([float(r[1]) for r in data[1:]])
     return (dates, levels)
-    
+
 def fft_analysis(levels, fs, fft_size):
     overlap_fac=0.5
     hop_size = np.int32(np.floor(fft_size * (1-overlap_fac)))
